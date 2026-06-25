@@ -1,0 +1,38 @@
+{
+  "name": "bp-vm-bronze",
+  "properties": {
+    "backupManagementType": "AzureIaasVM",
+    "policyType": "V1",
+    "instantRpRetentionRangeInDays": 2,
+    "instantRPDetails": {},
+    "protectedItemsCount": 0,
+    "schedulePolicy": {
+      "schedulePolicyType": "SimpleSchedulePolicy",
+      "scheduleRunFrequency": "Daily",
+      "scheduleRunTimes": [
+        "2026-01-01T03:00:00Z"
+      ],
+      "scheduleWeeklyFrequency": 0
+    },
+    "retentionPolicy": {
+      "retentionPolicyType": "LongTermRetentionPolicy",
+      "dailySchedule": {
+        "retentionTimes": [
+          "2026-01-01T03:00:00Z"
+        ],
+        "retentionDuration": {
+          "count": 9,
+          "durationType": "Days"
+        }
+      }
+    },
+    "tieringPolicy": {
+      "ArchivedRP": {
+        "tieringMode": "DoNotTier",
+        "duration": 0,
+        "durationType": "Invalid"
+      }
+    },
+    "timeZone": "Taipei Standard Time"
+  }
+}
